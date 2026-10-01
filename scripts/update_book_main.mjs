@@ -1,0 +1,10 @@
+import { readFileSync,writeFileSync } from 'node:fs';
+let source=readFileSync('src/main.js','utf8');
+if(!source.includes("import './book.js';"))source=source.replace("import './polish.css';","import './polish.css';\nimport './book.js';");
+const start=source.indexOf("const video=document.querySelector('#diary-video')");
+const end=source.indexOf('const motionButton=',start);
+if(start!==-1&&end!==-1)source=source.slice(0,start)+source.slice(end);
+source=source.replace(";if(motionOff)video.pause();",';');
+source=source.replace("document.querySelector('.hero').getBoundingClientRect()","document.querySelector('#story').getBoundingClientRect()");
+source=source.replace(";if(document.querySelector('#story').getBoundingClientRect().bottom>document.querySelector('header').offsetHeight)document.querySelectorAll('nav a').forEach(link=>link.removeAttribute('aria-current'))",'');
+writeFileSync('src/main.js',source);

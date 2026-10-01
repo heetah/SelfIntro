@@ -1,0 +1,25 @@
+<section id="story" class="book-section" aria-labelledby="book-title">
+  <div class="book-heading"><div><span class="tiny">THE UNIVERSITY YEARS / HEETAH</span><h1 id="book-title">每一頁，<em>都是我。</em></h1></div><p>從一圈校園路跑開始，<br>把大學生活，慢慢寫成一本書。</p></div>
+  <div class="book-stage" id="diary-book" role="region" aria-label="大學生活日記書" tabindex="0">
+    <div class="book-object">
+      <div class="book-spread" aria-hidden="true">
+        <article class="book-page page-left" id="book-left"></article>
+        <article class="book-page page-right" id="book-right"></article>
+      </div>
+      <button id="book-cover" class="book-cover" aria-label="翻開 Heetah 的大學生活日記" disabled>
+        <span class="cover-face cover-front"><span class="cover-top">PERSONAL FIELD NOTES<br>VOL. 01 / THE UNIVERSITY YEARS</span><span class="cover-line" aria-hidden="true"></span><span class="cover-title">A life<br>in <em>pages.</em></span><span class="cover-chinese">我的大學生活日記</span><span class="cover-symbol" aria-hidden="true">✳</span><span class="cover-bottom"><span>HEETAH<br>張宇誠 · SINCE 2023</span><span id="cover-prompt">正在整理書頁…</span></span></span>
+        <span class="cover-face cover-back" aria-hidden="true"><span>每一天，<br>都留下了一點自己。</span></span>
+      </button>
+      <div class="book-turn-layer" aria-hidden="true"></div>
+    </div>
+    <span class="book-ground" aria-hidden="true"></span>
+  </div>
+  <div class="book-navigation" aria-label="日記翻頁控制">
+    <div class="book-nav-top"><div class="book-direction"><button id="book-prev" aria-label="上一組日記頁" disabled>←</button><button id="book-next" aria-label="下一組日記頁" disabled>→</button></div><p id="book-status" role="status" aria-live="polite">翻開封面，從故事的起點開始。</p><button id="book-close" disabled>闔上書 ↗</button></div>
+    <label for="book-slider"><span>拖動，翻到另一段日常</span><span id="book-page-count">正在載入日記</span></label>
+    <input type="range" id="book-slider" min="0" max="0" value="0" step="1" aria-label="選擇日記雙頁" disabled/>
+    <div class="book-nav-foot"><span>← → 鍵盤翻頁 · 點擊日記放大閱讀</span><a href="https://youtube.com/shorts/QVBJT8K4-Z0" target="_blank" rel="noopener noreferrer">觀看日記影片 ↗</a></div>
+    <p id="book-error" role="alert" hidden>書頁暫時無法載入。<button id="book-retry">重新載入</button></p>
+  </div>
+</section>
+<dialog id="diary-image-dialog" aria-labelledby="diary-image-title"><button class="dialog-close" aria-label="關閉日記放大閱讀">✕</button><div class="diary-zoom-heading"><span class="tiny">THE ORIGINAL FIELD NOTE</span><h2 id="diary-image-title">日記</h2></div><img id="diary-zoom-image" alt=""/><p class="diary-zoom-hint">日記保留原本的文字與照片，可使用瀏覽器縮放仔細閱讀。</p></dialog>

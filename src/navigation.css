@@ -1,0 +1,46 @@
+/* Navigation, reading edges and quick-turn controls. */
+header{display:grid;grid-template-columns:auto auto 1fr auto auto;gap:28px;height:84px;padding-inline:var(--section-pad);background:#f5f3ed;border-bottom:1px solid #cbd0c6;box-shadow:0 3px 16px #17251a04}
+header .logo{font-size:26px;letter-spacing:-.8px;white-space:nowrap}
+header .header-caption{font-size:10px;line-height:1.65;color:var(--muted)}
+header nav{display:flex;justify-content:center;gap:8px;margin:0}
+header nav a{font-size:13px;min-height:44px;display:flex;align-items:center;justify-content:center;padding:10px 13px;border-radius:4px;white-space:nowrap;color:#60675e;transition:background .2s,color .2s}
+header nav a::after{display:none}header nav a:hover{background:#e9ece4;color:#263729}
+header nav a[aria-current]{background:#e3e8dd;color:#263729;font-weight:500}
+.nav-tools{display:flex;align-items:center;gap:8px;padding-left:18px;border-left:1px solid var(--line)}
+.nav-tools #motion-toggle,.nav-tools #language-toggle{font-size:11px;min-height:40px;white-space:nowrap;padding:8px 12px;letter-spacing:0;border:1px solid var(--line);border-radius:4px;background:transparent;min-width:44px}
+.nav-tools #motion-toggle:hover,.nav-tools #language-toggle:hover{background:#e6e9e1}
+header .header-contact{font-size:12px;padding:11px 0;white-space:nowrap}
+main>section{scroll-margin-top:104px}
+.book-edges{position:absolute;inset:0;pointer-events:none;z-index:8}
+.book-edges[hidden]{display:none}
+.book-edge{position:absolute;top:0;bottom:0;width:44px;pointer-events:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#cbd1db;background:transparent;opacity:.55;transition:background .2s,opacity .2s;border-radius:3px}
+.edge-prev{left:0;background:linear-gradient(90deg,#0003,transparent)}.edge-next{right:0;background:linear-gradient(-90deg,#0003,transparent)}
+.book-edge>span{font-family:Georgia,serif;font-size:27px;font-weight:400;line-height:1}
+.book-edge small{font-size:10px;writing-mode:vertical-rl;letter-spacing:2px;opacity:0;transition:opacity .2s}
+.book-edge:hover,.book-edge:focus-visible{opacity:1;background:#acb9d322}
+.book-edge:hover small,.book-edge:focus-visible small{opacity:1}
+.book-edge:disabled{opacity:0;pointer-events:none}
+.book-turning .book-edge{opacity:.2}.book-turning .book-edge:disabled{opacity:0}
+.book-direction{align-items:center;flex-shrink:0}
+.book-direction .book-fast-button{font-size:22px;color:#626d60;background:transparent}
+.book-direction .book-fast-button:hover:not(:disabled){color:var(--paper)}
+@media(min-width:1100px){.edge-prev{left:-44px;background:none;color:#677365}.edge-next{right:-44px;background:none;color:#677365}.book-edge:hover,.book-edge:focus-visible{background:#dce2d655;color:#2d4235}}
+@media(max-width:1200px){header{gap:16px}header .header-caption{display:none}header{grid-template-columns:auto 1fr auto auto}header nav a{padding-inline:10px;font-size:12px}}
+@media(max-width:900px){header{grid-template-columns:auto 1fr auto;padding-inline:24px;gap:12px}header .header-contact{display:none}.nav-tools{padding-left:12px}header nav{gap:3px}header nav a{padding-inline:8px}}
+@media(max-width:600px){
+ header{grid-template-columns:1fr auto;gap:3px 16px;height:auto;min-height:112px;padding:10px 20px 6px}
+ header .logo{font-size:24px}.nav-tools{grid-column:2;grid-row:1;border:0;padding:0;gap:7px}
+ .nav-tools #motion-toggle,.nav-tools #language-toggle{font-size:10px;padding:8px 10px;min-height:40px}
+ header nav{grid-column:1/-1;grid-row:2;justify-content:space-between;gap:4px;width:100%}
+ header nav a{font-size:12px;padding:10px 12px;min-height:44px;flex:1}
+ main>section,.book-section{scroll-margin-top:130px}
+ .book-edge{width:32px}.book-edge small{display:none}.book-edge>span{font-size:23px}
+ .book-nav-top{display:grid;grid-template-columns:1fr auto;gap:6px 16px;margin-bottom:16px}
+ .book-direction{grid-column:1;grid-row:1;gap:6px}
+ .book-direction button{width:38px;min-height:44px}
+ .book-nav-top>button{grid-column:2;grid-row:1;min-height:44px}
+ .book-nav-top>p,html[lang=en] .book-nav-top>p{grid-column:1/-1;grid-row:2;max-width:none;text-align:left;padding-top:5px}
+ html[lang=en] header nav a{font-size:11px;padding-inline:6px}
+}
+@media(max-width:350px){header{padding-inline:14px}header nav a{font-size:11px;padding-inline:8px}.book-direction{gap:5px}.book-direction button{width:36px}}
+@media(prefers-reduced-motion:reduce){header nav a,.book-edge,.book-edge small,.book-fast-button{transition:none}}
