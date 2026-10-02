@@ -11,7 +11,7 @@ await page.evaluate(()=>{
  function tick(t){if(last!==null)window.times.push(t-last);last=t;if(window.run)requestAnimationFrame(tick)}
  requestAnimationFrame(tick);
 });
-await page.locator('#book-fast-next').click();
+await page.locator('#diary-book').focus();await page.keyboard.press('Shift+ArrowRight');
 await page.waitForFunction(()=>document.querySelector('#diary-book').dataset.spread==='5'&&document.querySelector('#diary-book').getAttribute('aria-busy')==='false');
 const times=await page.evaluate(()=>{window.run=false;return window.times});
 const report={samples:times.length,medianMs:[...times].sort((a,b)=>a-b)[Math.floor(times.length/2)],maxMs:Math.max(...times),over34ms:times.filter(x=>x>34).length,note:'Local Chromium, 1440x1000, cold five-spread action including preparation; not a cross-device FPS guarantee.'};

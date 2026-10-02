@@ -1,0 +1,72 @@
+.memory-carousel{min-width:0;margin:0;color:var(--ink)}
+.memory-frame{position:relative;aspect-ratio:3/2;overflow:hidden;border-radius:3px;background:#182322;touch-action:pan-y;outline-offset:4px}
+.memory-images{position:absolute;inset:0}
+.memory-images img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .6s ease;pointer-events:none}
+.memory-images img.is-current{opacity:1}
+.memory-error{position:absolute;inset:0;display:grid;place-content:center;color:#f2eee2;padding:24px;text-align:center;font-size:13px}
+.memory-error[hidden]{display:none}
+.memory-controls{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0 8px}
+.memory-caption{font-size:12px;color:var(--muted);line-height:1.7}
+.memory-transport{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.memory-transport[hidden]{display:none}
+.memory-transport button{width:40px;height:40px;border:1px solid #b7c1b0;border-radius:3px;font-size:16px;background:#f8f7f080}
+.memory-transport button:hover:not(:disabled){background:#e2e8da}
+.memory-transport button:disabled{opacity:.4;cursor:default}
+.memory-count{font-size:11px;font-variant-numeric:tabular-nums;min-width:48px;text-align:center;color:var(--muted)}
+.memory-dots{display:flex;flex-wrap:wrap;gap:2px;justify-content:center}
+.memory-dots[hidden]{display:none}
+.memory-dots button{width:28px;height:28px;display:grid;place-content:center}
+.memory-dots button::before{content:'';width:5px;height:5px;background:#adb7a4;border-radius:50%;transition:width .2s}
+.memory-dots button[aria-current=true]::before{width:18px;border-radius:3px;background:#52614f}
+.memory-announcement{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.memory-gallery{border-top:1px solid var(--line);margin-top:58px;padding-top:36px;scroll-margin-top:110px}
+.memory-gallery-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:24px}
+.memory-eyebrow{font-size:9px;letter-spacing:1.5px;color:#69755f}
+.memory-gallery-heading h3{font:500 29px/1.5 var(--literary);margin:8px 0 0}
+.memory-gallery-heading p{font-size:13px;line-height:1.8;color:var(--muted);margin:0}
+.memory-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.memory-tabs button{padding:10px 16px;min-height:44px;border:1px solid #c7cebf;border-radius:3px;font-size:12px}
+.memory-tabs button[aria-selected=true]{background:#344637;color:#f5f3ed;border-color:#344637}
+.memory-panel{max-width:900px;margin:auto;padding:20px 24px 10px;border:1px solid #c8cfc0;background:#faf9f2a8;box-shadow:0 12px 40px -28px #27362655}
+.memory-compact{height:100%;display:flex;flex-direction:column}
+.memory-compact .memory-frame{aspect-ratio:auto;border-radius:0;flex:1;min-height:0}
+.memory-compact .memory-controls{padding:10px 12px 5px;gap:8px}
+.memory-compact .memory-transport{gap:4px}
+.memory-compact .memory-transport button{width:32px;height:34px}
+.memory-compact .memory-count{font-size:10px;min-width:42px}
+.memory-compact .memory-caption{font-size:11px}
+.project-visual.memory-project{aspect-ratio:4/3;overflow:visible;background:#f4f3eb;transform:none!important}
+.project-visual [data-image="sliding"]{object-fit:contain;background:#261e24}
+.project-visual.memory-project:hover{box-shadow:0 14px 30px -18px #26332c55}
+.camp-overview{padding:22px 24px;border:1px solid #c8cfbf;background:#e9eee3;margin:24px 0}
+.camp-overview p{margin:0;font-size:14px;line-height:1.95}
+.camp-overview p+p{margin-top:14px}
+.camp-story{margin-top:28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.camp-story>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:18px;align-items:center;padding:22px 0;font:500 22px/1.5 var(--literary)}
+.camp-story>summary::-webkit-details-marker{display:none}
+.camp-story>summary::after{content:'+';font:400 22px var(--body)}
+.camp-story[open]>summary::after{content:'−'}
+.camp-story-body{max-width:660px;padding-bottom:26px}
+.camp-story-body p{font-size:14px;line-height:2.05;white-space:pre-line;margin:0 0 22px}
+.camp-story-body .camp-story-intro{font-family:var(--literary);font-size:20px;line-height:1.9;color:#45533e}
+.camp-story-body blockquote{font:500 20px/1.9 var(--literary);margin:30px 0;padding:8px 0 8px 20px;border-left:2px solid #879677;color:#45533e}
+.camp-story-body hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.camp-story-author{font-size:12px!important;color:var(--muted)}
+.camp-source-link{display:inline-block;margin-top:18px;font-size:12px;text-decoration:underline;text-underline-offset:5px}
+.camp-timeline-link{display:inline-block;font-size:12px;min-height:44px;padding:12px 0;text-decoration:underline;text-underline-offset:5px}
+#project-dialog:has(.camp-overview){width:min(840px,calc(100vw - 32px));max-height:90dvh}
+#project-dialog.camp-dialog{padding:0}
+.camp-dialog .project-dialog-header{position:sticky;top:0;z-index:8;padding:28px 60px 20px;background:var(--paper);border-bottom:1px solid var(--line)}
+.camp-dialog .project-dialog-header h2{margin:10px 40px 0 0}
+.camp-dialog .project-dialog-header .dialog-close{top:22px;right:22px;background:var(--paper)}
+.camp-dialog #dialog-body{padding:24px 60px 42px}
+@media(max-width:600px){
+ .memory-gallery{margin-top:38px;padding-top:28px}.memory-gallery-heading{display:block}.memory-gallery-heading h3{font-size:25px}.memory-gallery-heading p{margin-top:10px;font-size:12px}
+ .memory-tabs{gap:6px}.memory-tabs button{padding:9px 12px;font-size:11px}.memory-panel{padding:12px 12px 6px}
+ .memory-controls{align-items:start;gap:5px;flex-wrap:wrap}.memory-caption{flex-basis:100%;font-size:11px}.memory-transport{margin-left:auto}.memory-transport button{width:36px;height:36px}
+ .memory-compact .memory-controls{flex-wrap:nowrap}.memory-compact .memory-caption{flex-basis:auto}.memory-compact .memory-transport button{width:28px;height:34px}.memory-compact .memory-count{min-width:38px}
+ .camp-overview{padding:18px}.camp-overview p{font-size:13px}.camp-story>summary{font-size:20px}.camp-story-body p{font-size:13px}.camp-story-body .camp-story-intro,.camp-story-body blockquote{font-size:18px}
+ .camp-dialog .project-dialog-header{padding:22px 24px 16px}.camp-dialog .project-dialog-header h2{font-size:26px}.camp-dialog #dialog-body{padding:20px 24px 30px}.camp-dialog .project-dialog-header .dialog-close{top:18px;right:18px}
+}
+@media(prefers-reduced-motion:reduce){.memory-images img,.memory-dots button::before{transition:none}}
+body.motion-off .memory-images img{transition:none}

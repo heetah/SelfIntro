@@ -52,7 +52,7 @@ stage.addEventListener('pointerup',event=>{
  const dx=event.clientX-pointer.x,dy=event.clientY-pointer.y;pointer=null;
  // A swipe traverses at least 15% of the book and is predominantly horizontal.
  if(Math.abs(dx)>stage.clientWidth*.15&&Math.abs(dx)>Math.abs(dy)*2){
-  stage.dataset.swiped='true';document.querySelector(dx<0?'#book-next':'#book-prev').click();
+  stage.dataset.swiped='true';stage.dispatchEvent(new KeyboardEvent('keydown',{key:dx<0?'ArrowRight':'ArrowLeft'}));
   setTimeout(()=>delete stage.dataset.swiped,0);
  }
 });

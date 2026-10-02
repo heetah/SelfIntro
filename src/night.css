@@ -64,7 +64,7 @@ html[lang=en] .timeline-item .role{line-height:1.6}
  .book-heading>p br{display:block}
  #motion-toggle{white-space:nowrap;letter-spacing:0;font-size:8px;padding:5px;flex-shrink:0}
  html[lang=en] .book-heading{display:block}html[lang=en] .book-heading h1{font-size:36px}html[lang=en] .book-heading>p{font-size:12px}
- html[lang=en] .book-preface h2{font-size:21px;line-height:1.1;margin-bottom:9px}html[lang=en] .book-preface p{font-size:11px;line-height:1.4;margin-bottom:8px}
+ html[lang=en] .book-preface h2{font-size:19px;line-height:1.1;margin-bottom:9px}html[lang=en] .book-preface p{font-size:10px;line-height:1.4;margin-bottom:8px}
  html[lang=en] .book-navigation label{font-size:9px}html[lang=en] .book-nav-top>p{font-size:10px;max-width:100px}html[lang=en] .book-nav-top>button{font-size:10px}
  html[lang=en] .book-nav-foot>span{font-size:9px}html[lang=en] .section-label>span:last-child{white-space:normal;text-align:right;font-size:10px}
  html[lang=en] .hero-actions{align-items:start;flex-direction:column}html[lang=en] .project-cover strong{font-size:30px}html[lang=en] .project-cover>span:first-child{font-size:9px}

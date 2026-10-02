@@ -24,8 +24,6 @@ export async function play(tracks, duration) {
   const start = document.timeline.currentTime;
   animations.forEach(animation => { animation.startTime = start; });
   const finish = () => { if (reducedMotion()) animations.forEach(animation => animation.finish()); };
-  const button = document.querySelector('#motion-toggle');
-  button?.addEventListener('click', finish);
   preference.addEventListener('change', finish);
   try { await Promise.all(animations.map(animation => animation.finished)); }
   finally {
@@ -33,7 +31,6 @@ export async function play(tracks, duration) {
       Object.assign(tracks[i].element.style, tracks[i].frames.at(-1));
       animation.cancel();
     });
-    button?.removeEventListener('click', finish);
     preference.removeEventListener('change', finish);
   }
 }

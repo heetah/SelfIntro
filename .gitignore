@@ -5,11 +5,24 @@
 /test-results/
 /playwright-report/
 /.vite/
+/.wrangler/
+/.vercel/
+/.netlify/
+/.venv/
+/venv/
+/.pytest_cache/
+/.ruff_cache/
 
 # Local configuration and logs
 .env
 .env.*
 !.env.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+*.pem
+*.key
+service-account*.json
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -25,6 +38,7 @@ Thumbs.db
 # by the website; the public CV copy remains publishable.
 /jogging_timelapse_6fps.mp4
 /詳細 CV.pdf
+/memory_pics/
 /public/media/diary.mp4
 /public/media/diary-poster.jpg
 
@@ -34,3 +48,10 @@ Thumbs.db
 !/analysis/diary-book-evidence.md
 !/analysis/diary-page-selection.json
 !/analysis/source-review.md
+
+!/analysis/editorial-source-map.md
+
+# Offline artwork renders and Blender recovery files; keep final public media.
+/artwork/renders/
+*.blend1
+*.blend2

@@ -1,0 +1,11 @@
+.personality{background:#f3f0e8;border-top:1px solid var(--line);border-bottom:1px solid var(--line);scroll-margin-top:110px}
+.traits-heading{display:flex;justify-content:space-between;gap:40px;align-items:baseline;margin-bottom:40px}
+.traits-heading h2{font:500 clamp(28px,3.3vw,46px)/1.4 var(--literary);margin:0}
+.traits-heading>p{font-size:13px;line-height:1.9;max-width:32ch;color:var(--muted);margin:0}
+.traits-layout{display:grid;grid-template-columns:1fr 2fr;gap:clamp(30px,7vw,100px)}
+.traits-tabs{display:flex;flex-direction:column;align-self:start;border-top:1px solid var(--line)}
+.traits-tabs button{text-align:left;padding:22px 14px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.5;transition:background .2s}
+.traits-tabs button[aria-selected=true]{background:#e2e7da;box-shadow:inset 3px 0 #53634e}
+.trait-panel{padding:32px clamp(22px,3vw,46px);background:#faf9f4;border:1px solid #c9cec1;border-radius:4px;min-height:300px}
+.trait-word{color:#62715b;font-size:11px;letter-spacing:.1em}.trait-panel h3{font:500 clamp(22px,2vw,30px)/1.5 var(--literary);margin:18px 0}.trait-panel p{font-size:14px;line-height:2;max-width:60ch}.trait-panel a{display:inline-block;margin-top:15px;font-size:12px}
+@media(max-width:600px){.traits-heading{display:block}.traits-heading>p{max-width:none;margin-top:18px}.traits-layout{grid-template-columns:1fr;gap:24px}.traits-tabs{display:grid;grid-template-columns:1fr 1fr}.traits-tabs button{padding:16px 10px;font-size:12px}.trait-panel{min-height:0}.trait-panel p{font-size:13px}.traits-heading{margin-bottom:26px}}

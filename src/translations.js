@@ -1,14 +1,18 @@
 // Editorial translations. Original diary scans and linked source PDFs stay in their source language.
 export const translations = {
+ '深入作品':'EXPLORE THE WORK','從問題，到系統。':'From a problem to a system.','閱讀環保科技執法系統的研究與實作。':'Explore the research and development behind the environmental enforcement system.','閱讀專題彙報 ↗':'Read the project report ↗',
+ '八個月籌備《黑神話：悟Code》，從團隊招募、招生與技術開發，到颱風後的場地調整。五天營期中，與夥伴一起完成課程、RPG、賭場 app 與晚會。':'Eight months of preparation for “Black Myth: WuCode”: recruiting a team and participants, developing technical systems, and adapting venues after a typhoon. Over five days, we delivered classes, the RPG, a casino app and the evening gathering together.',
+ '閱讀總召手記 ↗':'Read the camp chair’s journal ↗',
+ '查看這段經歷的照片 ↗':'Explore photographs of this experience ↗',
  '往前快翻 5 次':'Turn back five spreads','往後快翻 5 次':'Turn ahead five spreads',
  '關於我':'About','閱讀偏好':'Reading preferences','點擊左側，往前翻頁':'Turn back using the left edge','點擊右側，往後翻頁':'Turn forward using the right edge','上一頁':'Previous','下一頁':'Next','快速翻閱':'Quick turn','← 快翻 5 次':'← Turn back 5','快翻 5 次 →':'Turn ahead 5 →','每次翻至下一組雙頁':'Each turn advances one spread',
  '上一張原始日記':'Previous original diary page','下一張原始日記':'Next original diary page','← 上一頁':'← Previous','下一頁 →':'Next →','原始日記':'Original diary',
  'Heetah 張宇誠 — A life in pages.':'Heetah — A life in pages.',
  '跳至內容':'Skip to content','回到首頁':'Back to home','張宇誠':'Heetah','資訊工程 · 大學生活紀錄':'Computer science · University journal','主要導覽':'Main navigation',
- '日記':'Journal','作品':'Projects','經歷':'Experience','動態 ON':'Motion ON','動態 OFF':'Motion OFF','閱讀履歷 ↗':'View résumé ↗',
- '01 / 大學生活紀錄':'01 / THE UNIVERSITY JOURNAL','我的大學日記':'The university years',
+ '日記':'Journal','作品':'Projects','經歷':'Experience','動態 ON':'Motion ON','動態 OFF':'Motion OFF',
+ '01 / 大學生活紀錄':'01 / THE UNIVERSITY JOURNAL','用一本書，翻閱大學生活':'Turn the pages of my university life',
  '從 2023 年 9 月的環校路跑開始，':'It began with campus runs in September 2023.','記下課業、朋友與生活。':'Notes on learning, friendship and everyday life.',
- '先閱讀履歷 PDF ↗':'Read my résumé first ↗','大學生活日記書':'University journal reader','翻開 Heetah 的大學生活日記':'Open Heetah’s university journal',
+ '大學生活日記書':'University journal reader','翻開 Heetah 的大學生活日記':'Open Heetah’s university journal',
  '我的大學生活日記':'A university journal','張宇誠 · SINCE 2023':'HEETAH · SINCE 2023','正在整理書頁…':'Preparing the pages…',
  '每一天，':'Each day,','都留下了一點自己。':'a little of myself remains.',
  '日記翻頁控制':'Journal navigation','上一組日記頁':'Previous spread','下一組日記頁':'Next spread',
@@ -25,7 +29,7 @@ export const translations = {
  '參與 AIESEC 國際交流，並擔任中正資工營總召與系學會副會長。':'Participated in AIESEC exchanges, chaired the CCU CS Camp and served as student association vice president.',
  '自 2023 年 9 月開始記錄環校路跑，逐漸加入照片與生活分享。':'Started documenting campus runs in September 2023, gradually adding photographs and everyday stories.',
  '日記之外，以下是我的專案與參與經歷。':'Beyond the journal: projects and the teams I have worked with.',
- '個人摘要':'Quick profile','閱讀完整履歷 PDF ↗':'Full résumé PDF ↗','03 / 專案與活動':'03 / PROJECTS & ACTIVITIES','作品內容與我的角色':'The work and my role','作品與實作':'Selected work',
+ '個人摘要':'Quick profile','03 / 專案與活動':'03 / PROJECTS & ACTIVITIES','作品內容與我的角色':'The work and my role','作品與實作':'Selected work',
  '遊戲開發與營隊籌備，':'Game development and camp planning:','是我在課堂之外參與的兩項實作。':'two ways I have put learning into practice.',
  '查看 Sliding 專案':'View the Sliding project','程式設計（二）／期末專案':'PROGRAMMING II / FINAL PROJECT','彈跳遊戲開發':'A jumping game','專案組長 · 六人團隊':'Team leader · Six members',
  '閱讀專案介紹 →':'Explore the project →','Sliding 遊戲專案圖片':'Sliding game project image','六人團隊的彈跳遊戲 · 專案組長':'A six-person game project · Team leader','閱讀 Sliding 詳細介紹':'Read about Sliding',
@@ -34,12 +38,12 @@ export const translations = {
  '中正資工營活動圖片':'CCU CS Camp photograph','2025 中正資工營':'2025 CCU CS Camp','閱讀資工營詳細介紹':'Read about the CS camp','團隊協作':'Collaboration','活動規劃':'Event planning','技術開發':'Development',
  '04 / 經歷':'04 / EXPERIENCE','依年份整理':'A chronological record','學習與參與經歷':'Experience & involvement','包含實習、課程專案與校園參與。':'Internships, course projects and campus activities.',
  '點選項目可閱讀工作內容。':'Select an entry to read more.','經歷類型篩選':'Filter experience','全部':'All','技術':'Technical','交流與領導':'Exchange & leadership',
- '完整資料':'FURTHER DETAILS','閱讀我的履歷':'My résumé','學歷、專案與參與經歷，整理於 PDF 中。':'Education, projects and experience in one PDF (Chinese).','開啟履歷 PDF ↗':'Open résumé PDF ↗',
+ '完整資料':'FURTHER DETAILS','學歷、專案與參與經歷，整理於 PDF 中。':'Education, projects and experience in one PDF (Chinese).',
  '大學生活與作品紀錄':'A record of university life and work','編輯圖片 ↗':'Edit images ↗','回到頂端 ↑':'Back to top ↑','關閉個人摘要':'Close profile',
  '一名持續創作、記錄與學習的資工學生。':'A computer science student who builds, records and keeps learning.','目前學歷':'Education','國立中正大學':'National Chung Cheng University','資訊工程學系四年級':'Computer Science · Fourth year',
  '藍色種子計畫 · GenAI Intern':'Blue Seed Program · GenAI Intern','大學生活日記':'University journal','從 2023 年 9 月開始的日記':'Entries beginning in September 2023',
  '遊戲開發專案':'Game development','Sliding · 六人團隊 · 20+ 關卡 · 5+ 角色':'Sliding · Six members · 20+ levels · 5+ characters','團隊中的角色':'Team roles','專案組長、資工營總召、系學會副會長':'Project lead, CS camp chair and student association vice president',
- '閱讀完整履歷 ↗':'Read the full résumé ↗','關閉專案介紹':'Close project details','關閉圖片編輯':'Close image editor','讓作品有自己的樣子。':'Project images',
+ '關閉專案介紹':'Close project details','關閉圖片編輯':'Close image editor','讓作品有自己的樣子。':'Project images',
  '選擇圖片即可在此裝置預覽。下載後將圖片放入 public/images，依 README 設定，便能讓所有訪客看到。':'Choose an image to preview on this device. To publish it for all visitors, place the file in public/images and follow the README.',
  'Sliding 專案圖片':'Sliding project image','資工營活動圖片':'CS camp photograph','清除本機圖片':'Clear local images',
  'PROLOGUE / 序':'PROLOGUE','這不是一本':'A record of','完成的書。':'growing up.',
@@ -50,7 +54,7 @@ export const translations = {
  '在日記之外，還有我與團隊一起完成的作品、承擔的角色，以及持續探索的方向。':'Beyond the journal are the projects I have worked on, the roles I have taken and the things I am still exploring.',
  '繼續看看我的作品 ↗':'Explore my projects ↗','序章 · 第 1 篇日記':'Prologue · Entry 1','點擊，翻開這段生活 ↗':'Open the journal ↗','書頁暫時無法載入':'Pages could not be loaded','請重新載入書頁':'Please try loading the pages again',
  '總召集人 · 技術開發組組長 · 香舞教練':'Camp chair · Technical team lead · Camp dance instructor','中正資工系學會':'CCU CS Student Association','第 33 屆副會長':'33rd-term vice president','軟體工程專案':'Software engineering project','六人遊戲開發團隊 · 組長':'Six-person game development team · Lead','環校路跑日記':'Campus running journal','從 9 月開始的日常練習':'Daily records beginning in September',
- '以生成式 AI 實習生的角色，延續資訊工程領域的學習。履歷尚未提供實習專案細節，待後續補充。':'Continued my computer science studies as a generative AI intern. Project details have not yet been added to the résumé.',
+
  '在活動籌備中同時承擔統籌、技術開發與教學角色。':'Took on coordination, technical development and teaching roles during the camp preparations.',
  '以系學會副會長的角色參與校園事務，同期也加入臺南返鄉服務隊。':'Served as student association vice president and also joined the Tainan hometown service team.',
  '擔任軟體工程團隊組長。具體專案成果與技術內容待補充。':'Led a software engineering team. Project outcomes and technical details are yet to be added.',
@@ -70,3 +74,22 @@ export const translations = {
  '無法讀取這張圖片，請換一個檔案。':'This image could not be read. Please choose another file.',
  '已清除本機圖片。':'Local images cleared.','無法清除儲存資料，請使用瀏覽器的網站資料設定。':'Could not clear stored images. Use your browser’s site data settings.',
 };
+
+Object.assign(translations,{
+ '資訊工程、英文溝通、生成式 AI':'Computer science, English communication, generative AI',
+ '活動參與':'Activities',
+ '競技啦啦隊、FESHx.BIPA 印尼語教學計畫、返鄉服務隊':'Competitive cheerleading, FESHx.BIPA Indonesian language programme, winter service team',
+ 'Heetah 張宇誠':'Heetah portrait',
+ '從跑步，':'Running,','開始認識自己。':'and growing.',
+ '2023 年 9 月，我開始記錄環校路跑。後來，課業、朋友與團隊也走進了這些頁面。':'In September 2023, I began recording runs around campus. Coursework, friends and teams gradually joined these pages.',
+ '中文記下每天的熱鬧與疲憊，英文讓我練習表達，也整理那些不容易說出口的猶豫。':'Chinese captured the bustle and fatigue of each day. English gave me practice expressing myself and examining uncertainty.',
+ '這段日記在阿里山之行告一段落。留下的不是每天都完美的自己，而是願意繼續嘗試的自己。':'The series closed with a trip to Alishan. These pages hold someone willing to keep trying, through imperfect days.',
+ '謝謝你讀到這裡。從一個人的跑步，到和夥伴一起完成作品，這些頁面留下了我改變的過程。':'Thank you for reading. From solo runs to projects with teammates, these pages keep a record of how I changed.',
+ '記錄有了句點，學習仍在繼續。接下來的作品與經歷，會讓你看見日記之外的實作。':'The journal has an ending; learning continues. The projects and experiences below show what I built beyond these pages.'
+});
+
+Object.assign(translations,{
+ '2023 年 9 月，我開始記錄環校路跑。後來，課業與朋友也走進了書頁。':'In September 2023, I began recording campus runs. Classes and friends soon joined the pages.',
+ '中文記下生活，英文練習表達。熱鬧、疲憊與猶豫，都留在這裡。':'Chinese records life; English practises expression. Joy, fatigue and doubt belong here too.',
+ '這段日記在阿里山告一段落。每一頁，都是我學著成長的過程。':'The series closed in Alishan. Each page holds a little of how I grew.'
+});

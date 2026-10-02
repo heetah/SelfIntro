@@ -1,0 +1,51 @@
+import {chromium} from '@playwright/test';
+import assert from 'node:assert/strict';
+const browser=await chromium.launch();
+try{
+ const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];
+ page.on('pageerror',error=>errors.push(error.message));
+ await page.goto('http://127.0.0.1:5173');
+ assert.equal(await page.locator('.timeline-item').count(),14);
+ assert.deepEqual(await page.locator('.project-info button[data-project]').evaluateAll(nodes=>nodes.map(n=>n.dataset.project)),['sliding','camp','camptech','vision','cloudmile','association']);
+ for(const [role,count,file] of [['camp','11','camp-preparation-01'],['camptech','05','camp-tech-01'],['association','07','association-01'],['sliding','02','sliding-demo']]){
+  await page.locator(`.project [data-project="${role}"]`).first().click();
+  const album=page.locator('#project-dialog .memory-carousel');
+  assert.equal(await album.getAttribute('data-memory-group'),role);
+  assert.equal(await album.locator('.memory-count').textContent(),`01 / ${count}`);
+  assert.match(await album.locator('.is-current').getAttribute('src'),new RegExp(file));
+  await page.keyboard.press('Escape');
+ }
+ const row=page.locator('[data-experience="association"]');
+ await row.locator('summary').click();
+ await row.locator('.memory-next').click();
+ await page.locator('#language-toggle').click();
+ assert.equal(await row.getAttribute('open'),'');
+ assert.equal(await row.locator('.memory-count').textContent(),'02 / 07');
+ assert.match(await row.locator('.experience-prose').textContent(),/Welcoming new students/);
+ assert.match(await page.locator('[data-experience="vision"]').textContent(),/falsely accusing/);
+ await page.locator('[data-project="sliding"]').first().click();
+ assert.match(await page.locator('#dialog-body').textContent(),/second half of 2024/);
+ assert.match(await page.locator('#dialog-body').textContent(),/Monster Strike/);
+ assert.equal(await page.locator('#dialog-body .text-link').getAttribute('href'),'https://canva.link/9x2qxtt70g76upu');
+ await page.keyboard.press('Escape');
+ await page.locator('#language-toggle').click();
+ await page.locator('#work').scrollIntoViewIfNeeded();
+ await page.screenshot({path:'analysis/editorial-desktop.png'});
+ await page.setViewportSize({width:375,height:900});
+ await row.scrollIntoViewIfNeeded();
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+ await page.screenshot({path:'analysis/editorial-mobile.png'});
+ const dance=page.locator('[data-experience="dance"]');await dance.locator('summary').click();
+ assert.match(await dance.locator('.experience-prose').textContent(),/轉香者/);
+ assert.match(await dance.locator('.experience-prose').textContent(),/纏膠者/);
+ assert.match(await dance.locator('.experience-prose').textContent(),/收膠者/);
+ const prose=await page.locator('.experience-prose').allTextContents();
+ assert.equal(prose.some(text=>/日記裡|日記記下|中文日記|英文日記/.test(text)),false);
+ const {memoryGroups}=await import('../src/memory-data.js');
+ const paths=Object.values(memoryGroups).flatMap(group=>group.photos.map(photo=>photo.src));
+ assert.equal(paths.length,60);
+ const loaded=await page.evaluate(async paths=>Promise.all(paths.map(async src=>{const img=new Image();img.src=src;try{await img.decode();return img.naturalWidth>0;}catch{return false;}})),paths);
+ assert.equal(loaded.every(Boolean),true);
+ assert.deepEqual(errors,[]);
+ console.log('PASS: six project categories, supplied Sliding copy, incense roles, 60 photos, bilingual state preservation, mobile layout.');
+}finally{await browser.close();}

@@ -31,10 +31,10 @@ function convert(node,key,value){
 }
 function translate(root){
  if(root.nodeType===Node.TEXT_NODE){
-  if(root.parentElement?.closest('script,style,#language-toggle'))return;
+  if(root.parentElement?.closest('script,style,#language-toggle,[data-language-owned]'))return;
   const output=convert(root,'text',root.data);if(output!==root.data)root.data=output;return;
  }
- if(root.nodeType!==Node.ELEMENT_NODE||root.matches('script,style,#language-toggle'))return;
+ if(root.nodeType!==Node.ELEMENT_NODE||root.matches('script,style,#language-toggle,[data-language-owned]')||root.closest('[data-language-owned]'))return;
  for(const key of ['aria-label','aria-valuetext','alt','title','placeholder'])if(root.hasAttribute(key)){
   const value=root.getAttribute(key),output=convert(root,key,value);if(output!==value)root.setAttribute(key,output);
  }

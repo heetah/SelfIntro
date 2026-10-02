@@ -1,1 +1,13 @@
-{"width": 640, "height": 800, "fps": 24, "seconds": 12, "stars": 52, "renderer": "NumPy + FFmpeg / libx264", "seed": 2026}
+{
+  "width": 640,
+  "height": 800,
+  "fps": 24,
+  "timelineSeconds": 12,
+  "stars": 68,
+  "majorFlares": 16,
+  "lightRibbons": 0,
+  "flowParticles": 0,
+  "renderer": "Figma timeline + FFmpeg / libx264",
+  "source": "https://www.figma.com/design/SOKJQxuJq21gKpgswYzGZO",
+  "rootNodeId": "1:4"
+}

@@ -1,0 +1,82 @@
+/* Static background layers keep the book's animation budget available.
+   Spacing, opacity and colors below are visual design tokens, not model parameters. */
+:root{
+  --paper-fibres:url('/textures/paper-fibres.svg');
+  --field-orbits:url('/textures/field-orbits.svg');
+  --chapter-cream:#f5f3ed;
+  --chapter-sage:#e4e9df;
+  --chapter-blue:#e5e9ed;
+}
+body{background-color:var(--chapter-cream);background-image:var(--paper-fibres)}
+.book-section,.hero,.work,.journey,.connect{position:relative;isolation:isolate}
+.book-section::before,.book-section::after,.hero::before,.work::before,.work::after,.journey::before,.journey::after,.connect::after{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:-1;
+}
+.book-section,.hero,.work,.journey{border-color:#c9cfc3}
+.book-section{
+  background-color:var(--chapter-blue);
+  background-image:radial-gradient(ellipse at 50% 35%,#faf8ef 0%,#f1f1ea 35%,transparent 74%),linear-gradient(125deg,#e4e8e9,#e8ebe7 54%,#dce3e8);
+}
+.book-section::before{background:var(--paper-fibres);opacity:.7}
+.book-section::after{
+  background:var(--field-orbits) no-repeat right 42%/min(1100px,100%) auto;
+  opacity:.25;
+  mask-image:linear-gradient(90deg,transparent 12%,#000 80%);
+}
+.hero{
+  background-color:var(--chapter-cream);
+  background-image:radial-gradient(ellipse at 95% 8%,#dce4d4 0%,transparent 52%),radial-gradient(ellipse at 5% 85%,#eee4d3 0%,transparent 48%);
+}
+.hero::before,.work::before,.journey::before{background:var(--paper-fibres)}
+.personal-atlas{border-left-color:#b8c4ae}
+.profile-ledger>div{border-bottom-color:#bec9b5}
+.work{
+  background-color:var(--chapter-sage);
+  background-image:radial-gradient(ellipse at 6% 85%,#f2ece0 0%,transparent 60%),linear-gradient(135deg,#eef0e7,#dbe4d6);
+}
+.work::after{
+  background-image:linear-gradient(#62715712 1px,transparent 1px),linear-gradient(90deg,#62715712 1px,transparent 1px);
+  background-size:72px 72px;
+  mask-image:radial-gradient(ellipse at 90% 10%,#000,transparent 66%);
+}
+.project-visual{box-shadow:0 8px 22px -16px #32453455}
+.project-cover-game{background:linear-gradient(135deg,#edf0e6,#dce4d5)}
+.project-cover-camp{background:linear-gradient(135deg,#f1ecdf,#e5ddcd)}
+.journey{
+  background-color:#f4f3ed;
+  background-image:radial-gradient(ellipse at 0% 20%,#e5e9df 0%,transparent 50%),linear-gradient(100deg,#f2f2e9,#f7f5ef 70%);
+}
+.journey::after{
+  background:repeating-linear-gradient(90deg,transparent 0 87px,#69755c12 87px 88px);
+  mask-image:linear-gradient(90deg,#000,transparent 32%);
+}
+.connect{
+  color:#ece9dd;
+  background-color:#17252a;
+  background-image:linear-gradient(110deg,#17252af7 10%,#22322de0 62%,#182731b0),url('/media/night-sky-poster.webp');
+  background-position:center;
+  background-size:cover;
+  border-top:1px solid #899a803d;
+}
+.connect::after{
+  background:var(--field-orbits) no-repeat right 48%/760px auto;
+  opacity:.3;
+  mask-image:linear-gradient(90deg,transparent 35%,#000);
+}
+.connect .tiny{color:#c3c7b6}
+.connect p{color:#c4cdc1}
+.connect .primary-pill{background:#ecebdd;color:#26382b;border-color:#ecebdd}
+.connect .primary-pill:hover{background:#fffdf0;color:#1d2d22}
+.connect a:focus-visible{outline-color:var(--starlight)}
+footer{background:var(--paper-fibres),linear-gradient(100deg,#f2f1e8,#f5f3ed)}
+@media(max-width:600px){
+  .book-section::after{background-size:700px auto;background-position:32% 10%;opacity:.18}
+  .hero{background-image:radial-gradient(ellipse at 100% 45%,#e0e6d8,transparent 72%)}
+  .work::after{background-size:56px 56px;opacity:.7}
+  .journey::after{opacity:.45}
+  .connect::after{background-size:580px auto;background-position:35% 42%;opacity:.22}
+}
+@media(forced-colors:active){
+  .book-section::before,.book-section::after,.hero::before,.work::before,.work::after,.journey::before,.journey::after,.connect::after{display:none}
+  .connect .primary-pill{border:1px solid ButtonText}
+}

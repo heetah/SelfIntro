@@ -1,0 +1,19 @@
+{
+  "source": "https://www.figma.com/design/SOKJQxuJq21gKpgswYzGZO",
+  "rootNodeId": "1:4",
+  "renderer": "Figma timeline export + FFmpeg web encoding",
+  "width": 640,
+  "height": 800,
+  "fps": 24,
+  "timelineSeconds": 12,
+  "stars": 68,
+  "majorFlares": 16,
+  "lightRibbons": 0,
+  "flowParticles": 0,
+  "direction": "Dark portrait sky with twinkling stars and cross flares only; no ribbons or moving light streams.",
+  "parameters": "Visual art direction and delivery settings, not physical or machine-learning parameters.",
+  "outputs": [
+    "public/media/night-sky.mp4",
+    "public/media/night-sky-poster.webp"
+  ]
+}
